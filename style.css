@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root{
+    --primary_color:#1d3557;
+    --white_color:#fff;
+
+    --ubuntu:"Ubuntu";
+    
+    --poppins:"Poppins";
+
+    --box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+}
+
+
+html{
+    font-size: 70%;
+}
+
+
+*{
+    box-sizing: border-box;
+    
+    padding: 0.2;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*-------Utility class start-----------*/
+a{
+    text-decoration: none;
+}
+
+#container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.2 80px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.2 80px;
+    background-image: url('Images/hero.jpg'); /* Update the path as necessary */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  
+}
+
+
+/*-------Utility class close-----------*/
+
+
+
+
+/*-------Header start-----------*/
+header{
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    position: inherit;
+    padding: 1.5rem 1rem;
+    z-index: 1000;
+   
+}
+
+#logo img {
+    display: block;
+    object-fit: cover;
+    width: 10%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+#navbar nav li {
+    list-style-type: none;
+    margin: 1rem;
+}
+
+#navbar nav li a {
+    font-size: 1.6rem;
+    color: var(--white_color);
+    position: relative;
+}
+
+
+#navbar nav li a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: var(--primary_color);
+    width: 0%;
+    left: 0;
+    top: 30px;
+    transition: all 0.15s ease-in;
+}
+
+#navbar nav li a:hover::after{
+    width: 100%;
+}
+
+
+/*-------Header close-----------*/
+
+
+/*-------Showcase open-----------*/
+#showcase::before {
+    min-height: 100vh;
+    position: relative;
+    z-index: -10;
+    background-color: black;
+}
+
+
+#showcase img {
+    width: 200px;
+    height: auto; 
+}
+
+#showcase #content{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+min-height: 100vh;
+}
+
+#showcase #content h2{
+    font-size: 7rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--white_color);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#showcase #content h3{
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--white_color);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/*-------Showcase close-----------*/
+
+
+/*-------Aboutus open-----------*/
+
+
+/*-------Aboutus close-----------*/
+
+/*----Customer registration or login start----*/
+#login-or-reg {
+    background-color:var(--primary_color);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#login-or-reg h1 {
+    font-size: 5rem;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+#login-or-reg a {
+    display: block;
+    font-size: 4rem;
+    margin-top: 20px;
+    font-family: var(--roboto);
+}
+
+/*-----Customer registration or login close----*/
+
+
+/*-------Reservation open-----------*/
+#Reservation_table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#Reservation_table .form_data h2 {
+    font-size: 7rem;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#Reservation_table .form_data h3 {
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: center;
+    letter-spacing: 2px;
+}
+    /*-------Reservation close-----------*/
+
+    /*-------Images open-----------*/
+    .gallery {
+        display: flexbox;
+      
+        gap: 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 130px;
+        padding-top: 20px;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+
+    }
+    
+    .image {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .image img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+        max-width: 100%;
+    }
+    
+    .image:hover img {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: auto;
+    }
+    
+    .modal-content {
+        display: block;
+        margin: 50px auto;
+        max-width: 80%;
+        max-height: 80%;
+    }
+    
+    .close {
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        cursor: pointer;
+    }
+    /*-------Images close-----------*/
+
+/*-------Facilities close-----------*/
+/*-------Facilities close-----------*/
+/*****      facility        *****/
+
+
+
+#facility {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#facility h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px 20px; /* Padding around text */
+    border-radius: 10px; /* Rounded corners */
+    padding-top: 80px;
+}
+
+#container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.facility_item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    
+}
+
+.left_side_content {
+    flex: 1;
+    padding: 20px;
+}
+
+.right_side_content {
+    flex: 1;
+}
+
+.fac {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 0 0 8px;
+}
+
+h2 {
+    color: #555;
+}
+
+p {
+    color: #1b1a1a;
+    line-height: 1.5;
+   
+}
+    /*-------Facilities close-----------*/
+
+/*-------Footer open-----------*/
+
+/*-------Footer open-----------*/
+
+
+/*-------Footer close-----------*/
+/*-------Footer close-----------*/
+
+/*-------User_Header open-----------*/
+.message {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.message span {
+    font-weight: bold;
+}
+
+.message i {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+
+.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    padding: 1rem; /* Reduced size */
+    z-index: 1000;
+}
+
+.header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+    object-fit: cover;
+    width: 10%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.navbar li {
+    list-style-type: none;
+    margin: 0 1rem; /* Adjusted spacing */
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem; /* Slightly smaller font */
+    position: relative;
+}
+
+.navbar li a::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: var(--primary_color);
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.15s ease-in;
+}
+
+.navbar li a:hover::after {
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.icons a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.6rem; /* Resized icons */
+}
+
+.icons a:last-child {
+    margin-right: 0;
+}
+
+.profile {
+    color: white;
+}
+
+.profile .name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile .btn,
+.profile .delete-btn {
+    padding: 10px 20px; /* Increased padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none;
+    color: white;
+}
+
+.profile .btn {
+    background: var(--primary_color);
+}
+
+.profile .delete-btn {
+    background: red;
+}
+
+
+
+/* About Section */
+
